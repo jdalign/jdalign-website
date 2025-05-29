@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Align - Logo Options (Full Underscores)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@400;700;800&family=Oswald:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Define custom font families for easier use */
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .font-roboto { font-family: 'Roboto', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+        .font-source-sans { font-family: 'Source Sans Pro', sans-serif; }
+        .font-merriweather { font-family: 'Merriweather', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+
+        /* Basic body styling */
+        body {
+            font-family: 'Inter', sans-serif; /* Fallback font */
+            background-color: #f0f2f5; /* Light grey background */
+        }
+        .logo-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 2rem; /* p-8 */
+            margin-bottom: 2rem; /* mb-8 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transition: transform 0.2s ease-in-out;
+        }
+        .logo-card:hover {
+            transform: translateY(-5px);
+        }
+        .logo-option-title {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* font-semibold */
+            color: #4A5568; /* text-gray-700 */
+            margin-bottom: 1.5rem; /* mb-6 */
+            border-bottom: 1px solid #E2E8F0; /* border-gray-300 */
+            padding-bottom: 0.75rem; /* pb-3 */
+        }
+        .main-text-jd {
+             color: #2563EB; /* Tailwind blue-600 */
+        }
+        .main-text-align {
+            color: #374151; /* Tailwind gray-700 */
+        }
+        .subtitle-text {
+            display: block;
+            letter-spacing: 0.05em; /* tracking-wider for ALL CAPS */
+            color: #6B7280; /* Tailwind gray-500 */
+            text-transform: uppercase;
+        }
+        .underscore {
+            height: 3px; /* Thicker underscore */
+            background-color: #2563EB; /* Tailwind blue-600 */
+            margin-top: 0.25rem; /* mt-1 (4px), closer to text */
+            margin-bottom: 0.5rem; /* mb-2 (8px), space after underscore */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold font-poppins text-gray-800">JD ALIGN</h1>
+            <p class="text-xl text-gray-600 font-poppins">Logo Concepts (Full Width Underscores)</p>
+        </header>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 1: Poppins - Centered Underscore</h2>
+            <div class="text-center">
+                <div class="inline-block">
+                    <span class="font-poppins font-extrabold text-5xl sm:text-6xl">
+                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </span>
+                    <div class="underscore w-full"></div>
+                </div>
+                <span class="subtitle-text font-poppins font-medium text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 2: Montserrat - Left Underscore</h2>
+            <div class="text-left">
+                <div class="inline-block">
+                    <span class="font-montserrat font-bold text-4xl sm:text-5xl">
+                         <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </span>
+                    <div class="underscore w-full"></div>
+                </div>
+                <span class="subtitle-text font-montserrat font-medium text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 3: Source Sans - Stacked Underscore ALIGN</h2>
+            <div class="text-left">
+                <span class="main-text-jd font-source-sans font-semibold text-5xl sm:text-6xl block">JD</span>
+                <div class="inline-block">
+                    <span class="main-text-align font-source-sans font-semibold text-5xl sm:text-6xl block -mt-2">ALIGN</span>
+                    <div class="underscore w-full"></div>
+                </div>
+                <span class="subtitle-text font-source-sans font-normal text-md sm:text-lg mt-3">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+        
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 4: Poppins - Underscore Subtitle</h2>
+            <div class="text-left">
+                 <span class="font-poppins font-bold text-5xl sm:text-6xl block">
+                    <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                </span>
+                <div class="inline-block mt-1"> <span class="subtitle-text font-poppins font-normal text-lg sm:text-xl">TECHNOLOGY CONSULTING</span>
+                    <div class="underscore w-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 5: Montserrat - Centered Full Underscore</h2>
+            <div class="text-center">
+                <div class="inline-block">
+                    <span class="font-montserrat font-extrabold text-4xl sm:text-5xl">
+                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </span>
+                    <div class="underscore w-full my-3"></div> </div>
+                <span class="subtitle-text font-montserrat font-medium text-md sm:text-lg tracking-wider">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 6: Source Sans - Stacked Underscore Subtitle</h2>
+            <div class="text-left">
+                <span class="main-text-jd font-source-sans font-black text-6xl sm:text-7xl leading-none block">JD</span>
+                <span class="main-text-align font-source-sans font-light text-6xl sm:text-7xl leading-tight -mt-2 sm:-mt-3 block">ALIGN</span>
+                <div class="inline-block mt-3"> <span class="subtitle-text font-source-sans font-semibold text-sm sm:text-base tracking-widest">TECHNOLOGY CONSULTING</span>
+                    <div class="underscore w-full mt-1"></div> </div>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 7: Hybrid - Underscore Main</h2>
+            <div class="text-left">
+                <div class="inline-block">
+                    <span class="font-poppins font-bold text-5xl sm:text-6xl">
+                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </span>
+                    <div class="underscore w-full"></div>
+                </div>
+                <span class="subtitle-text font-montserrat font-regular text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+        
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 8: Source Sans - Centered Underscore Main</h2>
+            <div class="text-center">
+                <div class="inline-block">
+                    <span class="font-source-sans font-bold text-5xl sm:text-6xl">
+                         <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </span>
+                    <div class="underscore w-full"></div>
+                </div>
+                <span class="subtitle-text font-source-sans font-normal text-md sm:text-lg mt-2 tracking-wider">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 9: Montserrat - Stacked Underscore ALIGN</h2>
+            <div class="text-left">
+                <span class="main-text-jd font-montserrat font-black text-5xl sm:text-6xl leading-tight block">JD</span>
+                <div class="inline-block"> 
+                    <span class="main-text-align font-montserrat font-medium text-5xl sm:text-6xl leading-tight -mt-1 block">ALIGN</span>
+                    <div class="underscore w-full"></div> 
+                </div>
+                <span class="subtitle-text font-montserrat font-light text-base sm:text-lg mt-3">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+        
+        <div class="logo-card">
+            <h2 class="logo-option-title font-poppins">Option 10: Poppins - Duo Tones Underscore Main</h2>
+            <div class="text-center">
+                <div class="inline-block">
+                    <span class="font-poppins font-extrabold text-5xl sm:text-6xl">
+                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </span>
+                    <div class="underscore w-full"></div>
+                </div>
+                <span class="subtitle-text font-poppins font-medium text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
