@@ -3,198 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD Align - Logo Options (Full Underscores)</title>
+    <title>JD Align - Logo Design Tool</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@400;700;800&family=Oswald:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Define custom font families for easier use */
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
-        .font-lato { font-family: 'Lato', sans-serif; }
-        .font-roboto { font-family: 'Roboto', sans-serif; }
-        .font-playfair { font-family: 'Playfair Display', serif; }
-        .font-oswald { font-family: 'Oswald', sans-serif; }
-        .font-source-sans { font-family: 'Source Sans Pro', sans-serif; }
-        .font-merriweather { font-family: 'Merriweather', serif; }
-        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-source-sans { 
+            font-family: 'Source Sans Pro', sans-serif; 
+        }
 
-        /* Basic body styling */
         body {
-            font-family: 'Inter', sans-serif; /* Fallback font */
-            background-color: #f0f2f5; /* Light grey background */
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
         }
-        .logo-card {
-            background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded-xl */
-            padding: 2rem; /* p-8 */
-            margin-bottom: 2rem; /* mb-8 */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-            transition: transform 0.2s ease-in-out;
+
+        .logo-container {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 4rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
         }
-        .logo-card:hover {
-            transform: translateY(-5px);
+
+        .controls-panel {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            margin: 2rem auto;
+            max-width: 600px;
         }
-        .logo-option-title {
-            font-size: 1.125rem; /* text-lg */
-            font-weight: 600; /* font-semibold */
-            color: #4A5568; /* text-gray-700 */
-            margin-bottom: 1.5rem; /* mb-6 */
-            border-bottom: 1px solid #E2E8F0; /* border-gray-300 */
-            padding-bottom: 0.75rem; /* pb-3 */
-        }
+
         .main-text-jd {
-             color: #2563EB; /* Tailwind blue-600 */
+            color: #2563EB;
         }
+
         .main-text-align {
-            color: #374151; /* Tailwind gray-700 */
+            color: #374151;
         }
+
         .subtitle-text {
             display: block;
-            letter-spacing: 0.05em; /* tracking-wider for ALL CAPS */
-            color: #6B7280; /* Tailwind gray-500 */
+            letter-spacing: 0.05em;
+            color: #6B7280;
             text-transform: uppercase;
         }
+
         .underscore {
-            height: 3px; /* Thicker underscore */
-            background-color: #2563EB; /* Tailwind blue-600 */
-            margin-top: 0.25rem; /* mt-1 (4px), closer to text */
-            margin-bottom: 0.5rem; /* mb-2 (8px), space after underscore */
+            height: 3px;
+            background-color: #2563EB;
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .slider-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .slider-label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #e2e8f0;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #2563EB;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #2563EB;
+            cursor: pointer;
+            border: none;
+        }
+
+        .value-display {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.8rem;
+            color: #475569;
+            margin-left: 0.5rem;
+            min-width: 3rem;
+            text-align: center;
         }
     </style>
 </head>
-<body class="p-4 sm:p-8">
-    <div class="max-w-4xl mx-auto">
-        <header class="text-center mb-10">
-            <h1 class="text-4xl font-bold font-poppins text-gray-800">JD ALIGN</h1>
-            <p class="text-xl text-gray-600 font-poppins">Logo Concepts (Full Width Underscores)</p>
-        </header>
-
-       <div class="logo-card">
-    <h2 class="logo-option-title font-poppins">Option 1: Poppins - Centered Underscore</h2>
-    <div class="text-center">
-        <div class="inline-block text-center">
-            <div class="font-poppins font-extrabold text-5xl sm:text-6xl">
-                <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+<body class="p-4">
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Fixed Reference Logo -->
+        <div class="logo-container" style="margin-bottom: 1rem;">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Reference Logo (Default Settings)</h3>
+                <div class="inline-block text-center">
+                    <div class="font-source-sans" style="font-size: 98px; font-weight: 600; line-height: 1.0; margin-bottom: 0px;">
+                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </div>
+                    <div class="underscore w-full" style="height: 3px; margin-top: 0px; margin-bottom: 0px;"></div>
+                    <div class="subtitle-text font-source-sans" style="font-size: 31px; font-weight: 400; letter-spacing: 0.05em; margin-top: 0px;">
+                        TECHNOLOGY CONSULTING
+                    </div>
+                </div>
             </div>
-            <div class="underscore w-full"></div>
-            <div class="subtitle-text font-poppins font-medium text-xl tracking-wide mt-2">
-                TECHNOLOGY CONSULTING
+        </div>
+
+        <!-- Dynamic Logo Display -->
+        <div class="logo-container" style="padding: 30px;">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Dynamic Logo (Adjustable)</h3>
+                <div class="inline-block text-center">
+                    <div id="mainText" class="font-source-sans" style="font-size: 98px; font-weight: 600; line-height: 1.0; margin-bottom: 0px;">
+                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
+                    </div>
+                    <div id="underscore" class="underscore w-full" style="height: 3px; margin-top: 0px; margin-bottom: 0px;"></div>
+                    <div id="subtitle" class="subtitle-text font-source-sans" style="font-size: 31px; font-weight: 400; letter-spacing: 0.05em; margin-top: 0px;">
+                        TECHNOLOGY CONSULTING
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Logo Adjustment Controls</h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Left Column -->
+                <div>
+                    <div class="slider-container">
+                        <label class="slider-label">Main Text Size: <span class="value-display" id="mainSizeValue">98px</span></label>
+                        <input type="range" min="60" max="140" value="98" class="slider" id="mainSize">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Main Text Weight: <span class="value-display" id="mainWeightValue">Semi-Bold</span></label>
+                        <input type="range" min="1" max="5" value="3" class="slider" id="mainWeight">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Subtitle Size: <span class="value-display" id="subtitleSizeValue">31px</span></label>
+                        <input type="range" min="12" max="32" value="31" class="slider" id="subtitleSize">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Subtitle Weight: <span class="value-display" id="subtitleWeightValue">Normal</span></label>
+                        <input type="range" min="1" max="5" value="2" class="slider" id="subtitleWeight">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Underscore Height: <span class="value-display" id="underscoreHeightValue">3px</span></label>
+                        <input type="range" min="1" max="8" value="3" class="slider" id="underscoreHeight">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Letter Spacing: <span class="value-display" id="letterSpacingValue">0.05em</span></label>
+                        <input type="range" min="0" max="20" value="5" class="slider" id="letterSpacing">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Main Text Bottom Margin: <span class="value-display" id="mainBottomValue">0px</span></label>
+                        <input type="range" min="-20" max="20" value="0" class="slider" id="mainBottom">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Main Text Line Height: <span class="value-display" id="lineHeightValue">1.0</span></label>
+                        <input type="range" min="70" max="120" value="100" class="slider" id="lineHeight">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <div class="slider-container">
+                        <label class="slider-label">Underscore Top Margin: <span class="value-display" id="underscoreTopValue">0px</span></label>
+                        <input type="range" min="-10" max="20" value="0" class="slider" id="underscoreTop">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Underscore Bottom Margin: <span class="value-display" id="underscoreBottomValue">0px</span></label>
+                        <input type="range" min="-10" max="20" value="0" class="slider" id="underscoreBottom">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Subtitle Top Margin: <span class="value-display" id="subtitleTopValue">0px</span></label>
+                        <input type="range" min="-15" max="30" value="0" class="slider" id="subtitleTop">
+                    </div>
+
+                    <div class="slider-container">
+                        <label class="slider-label">Container Padding: <span class="value-display" id="paddingValue">30px</span></label>
+                        <input type="range" min="20" max="100" value="30" class="slider" id="padding">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="text-center mt-6">
+                <button id="resetBtn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    Reset to Default
+                </button>
+            </div>
+
+            <!-- Settings Export -->
+            <div class="mt-6">
+                <label class="slider-label">Current Settings (copy and paste to share):</label>
+                <textarea id="settingsOutput" class="w-full h-32 p-3 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm resize-none" readonly></textarea>
             </div>
         </div>
     </div>
-</div>
 
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 2: Montserrat - Left Underscore</h2>
-            <div class="text-left">
-                <div class="inline-block">
-                    <span class="font-montserrat font-bold text-4xl sm:text-5xl">
-                         <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
-                    </span>
-                    <div class="underscore w-full"></div>
-                </div>
-                <span class="subtitle-text font-montserrat font-medium text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
+    <script>
+        // Get all elements
+        const mainText = document.getElementById('mainText');
+        const subtitle = document.getElementById('subtitle');
+        const underscore = document.getElementById('underscore');
+        const logoContainer = document.querySelector('.logo-container');
 
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 3: Source Sans - Stacked Underscore ALIGN</h2>
-            <div class="text-left">
-                <span class="main-text-jd font-source-sans font-semibold text-5xl sm:text-6xl block">JD</span>
-                <div class="inline-block">
-                    <span class="main-text-align font-source-sans font-semibold text-5xl sm:text-6xl block -mt-2">ALIGN</span>
-                    <div class="underscore w-full"></div>
-                </div>
-                <span class="subtitle-text font-source-sans font-normal text-md sm:text-lg mt-3">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
-        
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 4: Poppins - Underscore Subtitle</h2>
-            <div class="text-left">
-                 <span class="font-poppins font-bold text-5xl sm:text-6xl block">
-                    <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
-                </span>
-                <div class="inline-block mt-1"> <span class="subtitle-text font-poppins font-normal text-lg sm:text-xl">TECHNOLOGY CONSULTING</span>
-                    <div class="underscore w-full"></div>
-                </div>
-            </div>
-        </div>
+        // Get all sliders
+        const mainSize = document.getElementById('mainSize');
+        const mainWeight = document.getElementById('mainWeight');
+        const subtitleSize = document.getElementById('subtitleSize');
+        const subtitleWeight = document.getElementById('subtitleWeight');
+        const underscoreHeight = document.getElementById('underscoreHeight');
+        const letterSpacing = document.getElementById('letterSpacing');
+        const mainBottom = document.getElementById('mainBottom');
+        const lineHeight = document.getElementById('lineHeight');
+        const underscoreTop = document.getElementById('underscoreTop');
+        const underscoreBottom = document.getElementById('underscoreBottom');
+        const subtitleTop = document.getElementById('subtitleTop');
+        const padding = document.getElementById('padding');
 
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 5: Montserrat - Centered Full Underscore</h2>
-            <div class="text-center">
-                <div class="inline-block">
-                    <span class="font-montserrat font-extrabold text-4xl sm:text-5xl">
-                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
-                    </span>
-                    <div class="underscore w-full my-3"></div> </div>
-                <span class="subtitle-text font-montserrat font-medium text-md sm:text-lg tracking-wider">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
+        // Get value displays
+        const mainSizeValue = document.getElementById('mainSizeValue');
+        const mainWeightValue = document.getElementById('mainWeightValue');
+        const subtitleSizeValue = document.getElementById('subtitleSizeValue');
+        const subtitleWeightValue = document.getElementById('subtitleWeightValue');
+        const underscoreHeightValue = document.getElementById('underscoreHeightValue');
+        const letterSpacingValue = document.getElementById('letterSpacingValue');
+        const mainBottomValue = document.getElementById('mainBottomValue');
+        const lineHeightValue = document.getElementById('lineHeightValue');
+        const underscoreTopValue = document.getElementById('underscoreTopValue');
+        const underscoreBottomValue = document.getElementById('underscoreBottomValue');
+        const subtitleTopValue = document.getElementById('subtitleTopValue');
+        const paddingValue = document.getElementById('paddingValue');
+        const settingsOutput = document.getElementById('settingsOutput');
 
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 6: Source Sans - Stacked Underscore Subtitle</h2>
-            <div class="text-left">
-                <span class="main-text-jd font-source-sans font-black text-6xl sm:text-7xl leading-none block">JD</span>
-                <span class="main-text-align font-source-sans font-light text-6xl sm:text-7xl leading-tight -mt-2 sm:-mt-3 block">ALIGN</span>
-                <div class="inline-block mt-3"> <span class="subtitle-text font-source-sans font-semibold text-sm sm:text-base tracking-widest">TECHNOLOGY CONSULTING</span>
-                    <div class="underscore w-full mt-1"></div> </div>
-            </div>
-        </div>
+        // Font weight mapping
+        function getWeightValue(sliderValue) {
+            const weights = {
+                1: { value: 300, name: 'Light' },
+                2: { value: 400, name: 'Normal' },
+                3: { value: 600, name: 'Semi-Bold' },
+                4: { value: 700, name: 'Bold' },
+                5: { value: 900, name: 'Black' }
+            };
+            return weights[sliderValue];
+        }
 
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 7: Hybrid - Underscore Main</h2>
-            <div class="text-left">
-                <div class="inline-block">
-                    <span class="font-poppins font-bold text-5xl sm:text-6xl">
-                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
-                    </span>
-                    <div class="underscore w-full"></div>
-                </div>
-                <span class="subtitle-text font-montserrat font-regular text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
-        
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 8: Source Sans - Centered Underscore Main</h2>
-            <div class="text-center">
-                <div class="inline-block">
-                    <span class="font-source-sans font-bold text-5xl sm:text-6xl">
-                         <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
-                    </span>
-                    <div class="underscore w-full"></div>
-                </div>
-                <span class="subtitle-text font-source-sans font-normal text-md sm:text-lg mt-2 tracking-wider">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
+        // Update settings text
+        function updateSettingsText() {
+            const settings = `JD ALIGN Logo Settings:
+Main Text Size: ${mainSize.value}px
+Main Text Weight: ${getWeightValue(mainWeight.value).name}
+Main Text Line Height: ${(lineHeight.value / 100).toFixed(2)}
+Main Text Bottom Margin: ${mainBottom.value}px
+Subtitle Size: ${subtitleSize.value}px
+Subtitle Weight: ${getWeightValue(subtitleWeight.value).name}
+Underscore Height: ${underscoreHeight.value}px
+Letter Spacing: ${(letterSpacing.value / 100).toFixed(2)}em
+Underscore Top Margin: ${underscoreTop.value}px
+Underscore Bottom Margin: ${underscoreBottom.value}px
+Subtitle Top Margin: ${subtitleTop.value}px
+Container Padding: ${padding.value}px`;
+            
+            settingsOutput.value = settings;
+        }
 
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 9: Montserrat - Stacked Underscore ALIGN</h2>
-            <div class="text-left">
-                <span class="main-text-jd font-montserrat font-black text-5xl sm:text-6xl leading-tight block">JD</span>
-                <div class="inline-block"> 
-                    <span class="main-text-align font-montserrat font-medium text-5xl sm:text-6xl leading-tight -mt-1 block">ALIGN</span>
-                    <div class="underscore w-full"></div> 
-                </div>
-                <span class="subtitle-text font-montserrat font-light text-base sm:text-lg mt-3">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
-        
-        <div class="logo-card">
-            <h2 class="logo-option-title font-poppins">Option 10: Poppins - Duo Tones Underscore Main</h2>
-            <div class="text-center">
-                <div class="inline-block">
-                    <span class="font-poppins font-extrabold text-5xl sm:text-6xl">
-                        <span class="main-text-jd">JD</span> <span class="main-text-align">ALIGN</span>
-                    </span>
-                    <div class="underscore w-full"></div>
-                </div>
-                <span class="subtitle-text font-poppins font-medium text-lg sm:text-xl mt-2">TECHNOLOGY CONSULTING</span>
-            </div>
-        </div>
+        // Update functions
+        function updateMainSize() {
+            const size = mainSize.value + 'px';
+            mainText.style.fontSize = size;
+            mainSizeValue.textContent = size;
+            updateSettingsText();
+        }
 
-    </div>
+        function updateSubtitleSize() {
+            const size = subtitleSize.value + 'px';
+            subtitle.style.fontSize = size;
+            subtitleSizeValue.textContent = size;
+            updateSettingsText();
+        }
+
+        function updateUnderscoreHeight() {
+            const height = underscoreHeight.value + 'px';
+            underscore.style.height = height;
+            underscoreHeightValue.textContent = height;
+            updateSettingsText();
+        }
+
+        function updateLetterSpacing() {
+            const spacing = (letterSpacing.value / 100) + 'em';
+            subtitle.style.letterSpacing = spacing;
+            letterSpacingValue.textContent = spacing;
+            updateSettingsText();
+        }
+
+        function updateUnderscoreTop() {
+            const margin = underscoreTop.value + 'px';
+            underscore.style.marginTop = margin;
+            underscoreTopValue.textContent = margin;
+            updateSettingsText();
+        }
+
+        function updateUnderscoreBottom() {
+            const margin = underscoreBottom.value + 'px';
+            underscore.style.marginBottom = margin;
+            underscoreBottomValue.textContent = margin;
+            updateSettingsText();
+        }
+
+        function updateSubtitleTop() {
+            const margin = subtitleTop.value + 'px';
+            subtitle.style.marginTop = margin;
+            subtitleTopValue.textContent = margin;
+            updateSettingsText();
+        }
+
+        function updatePadding() {
+            const pad = padding.value + 'px';
+            logoContainer.style.padding = pad;
+            paddingValue.textContent = pad;
+            updateSettingsText();
+        }
+
+        function updateMainBottom() {
+            const margin = mainBottom.value + 'px';
+            mainText.style.marginBottom = margin;
+            mainBottomValue.textContent = margin;
+            updateSettingsText();
+        }
+
+        function updateLineHeight() {
+            const height = (lineHeight.value / 100);
+            mainText.style.lineHeight = height;
+            lineHeightValue.textContent = height.toFixed(2);
+            updateSettingsText();
+        }
+
+        function updateMainWeight() {
+            const weight = getWeightValue(mainWeight.value);
+            mainText.style.fontWeight = weight.value;
+            mainWeightValue.textContent = weight.name;
+            updateSettingsText();
+        }
+
+        function updateSubtitleWeight() {
+            const weight = getWeightValue(subtitleWeight.value);
+            subtitle.style.fontWeight = weight.value;
+            subtitleWeightValue.textContent = weight.name;
+            updateSettingsText();
+        }
+
+        // Add event listeners
+        mainSize.addEventListener('input', updateMainSize);
+        mainWeight.addEventListener('input', updateMainWeight);
+        subtitleSize.addEventListener('input', updateSubtitleSize);
+        subtitleWeight.addEventListener('input', updateSubtitleWeight);
+        underscoreHeight.addEventListener('input', updateUnderscoreHeight);
+        letterSpacing.addEventListener('input', updateLetterSpacing);
+        mainBottom.addEventListener('input', updateMainBottom);
+        lineHeight.addEventListener('input', updateLineHeight);
+        underscoreTop.addEventListener('input', updateUnderscoreTop);
+        underscoreBottom.addEventListener('input', updateUnderscoreBottom);
+        subtitleTop.addEventListener('input', updateSubtitleTop);
+        padding.addEventListener('input', updatePadding);
+
+        // Reset function
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            mainSize.value = 98;
+            mainWeight.value = 3;
+            subtitleSize.value = 31;
+            subtitleWeight.value = 2;
+            underscoreHeight.value = 3;
+            letterSpacing.value = 5;
+            mainBottom.value = 0;
+            lineHeight.value = 100;
+            underscoreTop.value = 0;
+            underscoreBottom.value = 0;
+            subtitleTop.value = 0;
+            padding.value = 30;
+
+            updateMainSize();
+            updateMainWeight();
+            updateSubtitleSize();
+            updateSubtitleWeight();
+            updateUnderscoreHeight();
+            updateLetterSpacing();
+            updateMainBottom();
+            updateLineHeight();
+            updateUnderscoreTop();
+            updateUnderscoreBottom();
+            updateSubtitleTop();
+            updatePadding();
+        });
+
+        // Initialize settings text on page load
+        updateSettingsText();
+    </script>
 </body>
 </html>
