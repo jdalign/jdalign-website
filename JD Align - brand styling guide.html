@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD ALIGN - Complete Branding Kit</title>
+    
+    <!-- Favicon - JD icon with proper sizing -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3e%3ccircle cx='16' cy='16' r='14' fill='%232563EB'/%3e%3ctext x='16' y='21' font-family='Source Sans Pro, sans-serif' font-size='14' font-weight='600' fill='white' text-anchor='middle'%3eJD%3c/text%3e%3c/svg%3e">
+    
+    <!-- Apple Touch Icon for iOS devices -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3e%3ccircle cx='90' cy='90' r='80' fill='%232563EB'/%3e%3ctext x='90' y='110' font-family='Source Sans Pro, sans-serif' font-size='48' font-weight='600' fill='white' text-anchor='middle'%3eJD%3c/text%3e%3c/svg%3e">
+    
+    <!-- Google Fonts - Source Sans Pro (Primary brand font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==== BRAND COLOUR PALETTE ==== */
+        :root {
+            /* Primary Brand Colours */
+            --brand-blue: #2563EB;        /* Primary blue - JD text and underlines */
+            --brand-dark-grey: #374151;   /* Dark grey - ALIGN text */
+            --brand-medium-grey: #6B7280; /* Medium grey - Subtitles and secondary text */
+            --brand-light-grey: #F3F4F6;  /* Light grey - Backgrounds */
+            --brand-white: #FFFFFF;        /* Pure white - Primary backgrounds */
+            
+            /* Typography Weights and Sizes */
+            --font-family: 'Source Sans Pro', sans-serif;
+            --logo-size-xl: 98px;         /* Main logo size */
+            --logo-size-lg: 64px;         /* Large variant */
+            --logo-size-md: 48px;         /* Medium variant */
+            --logo-size-sm: 32px;         /* Small variant */
+            --logo-size-xs: 24px;         /* Extra small variant */
+            --subtitle-size: 31px;        /* Main subtitle size */
+            --subtitle-size-sm: 20px;     /* Small subtitle size */
+            --subtitle-size-xs: 14px;     /* Extra small subtitle size */
+            
+            /* Spacing and Layout */
+            --underline-height: 3px;      /* Standard underline thickness */
+            --underline-height-sm: 2px;   /* Small underline thickness */
+            --letter-spacing: 0.05em;     /* Subtitle letter spacing */
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--brand-white);
+            margin: 0;
+            padding: 30px;
+            line-height: 1.6;
+            color: var(--brand-dark-grey);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ==== SECTION STYLING ==== */
+        .section {
+            margin-bottom: 60px;
+            padding: 30px;
+            border: 1px solid var(--brand-light-grey);
+            border-radius: 8px;
+            background: var(--brand-white);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brand-blue);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--brand-blue);
+            padding-bottom: 10px;
+        }
+
+        .brand-notes {
+            background: var(--brand-light-grey);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            border-left: 4px solid var(--brand-blue);
+        }
+
+        .brand-notes h4 {
+            margin-top: 0;
+            color: var(--brand-blue);
+        }
+
+        /* ==== LOGO VARIANTS ==== */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Main logo container - let it size naturally */
+        .logo-main {
+            max-width: none;
+            display: inline-block;
+        }
+
+        /* Main Logo - Original Size */
+        .logo-main .main-text {
+            font-size: var(--logo-size-xl);
+            font-weight: 600;
+            line-height: 1.0;
+            margin-bottom: 0px;
+            display: inline-block;
+        }
+
+        .logo-main .jd-text {
+            color: var(--brand-blue);
+        }
+
+        .logo-main .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-main .underscore {
+            height: var(--underline-height);
+            background-color: var(--brand-blue);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .logo-main .subtitle {
+            font-size: var(--subtitle-size);
+            font-weight: 400;
+            letter-spacing: var(--letter-spacing);
+            color: var(--brand-medium-grey);
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+        /* Large Logo Variant */
+        .logo-large .main-text {
+            font-size: var(--logo-size-lg);
+            font-weight: 600;
+            line-height: 1.0;
+            margin-bottom: 0px;
+        }
+
+        .logo-large .jd-text {
+            color: var(--brand-blue);
+        }
+
+        .logo-large .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-large .underscore {
+            height: var(--underline-height);
+            background-color: var(--brand-blue);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .logo-large .subtitle {
+            font-size: var(--subtitle-size-sm);
+            font-weight: 400;
+            letter-spacing: var(--letter-spacing);
+            color: var(--brand-medium-grey);
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+        /* Medium Logo Variant */
+        .logo-medium .main-text {
+            font-size: var(--logo-size-md);
+            font-weight: 600;
+            line-height: 1.0;
+            margin-bottom: 0px;
+        }
+
+        .logo-medium .jd-text {
+            color: var(--brand-blue);
+        }
+
+        .logo-medium .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-medium .underscore {
+            height: var(--underline-height-sm);
+            background-color: var(--brand-blue);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .logo-medium .subtitle {
+            font-size: var(--subtitle-size-sm);
+            font-weight: 400;
+            letter-spacing: var(--letter-spacing);
+            color: var(--brand-medium-grey);
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+        /* Small Logo Variant */
+        .logo-small .main-text {
+            font-size: var(--logo-size-sm);
+            font-weight: 600;
+            line-height: 1.0;
+            margin-bottom: 0px;
+        }
+
+        .logo-small .jd-text {
+            color: var(--brand-blue);
+        }
+
+        .logo-small .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-small .underscore {
+            height: var(--underline-height-sm);
+            background-color: var(--brand-blue);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .logo-small .subtitle {
+            font-size: var(--subtitle-size-xs);
+            font-weight: 400;
+            letter-spacing: var(--letter-spacing);
+            color: var(--brand-medium-grey);
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+        /* Extra Small Logo Variant */
+        .logo-xs .main-text {
+            font-size: var(--logo-size-xs);
+            font-weight: 600;
+            line-height: 1.0;
+            margin-bottom: 0px;
+        }
+
+        .logo-xs .jd-text {
+            color: var(--brand-blue);
+        }
+
+        .logo-xs .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-xs .underscore {
+            height: var(--underline-height-sm);
+            background-color: var(--brand-blue);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .logo-xs .subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: var(--letter-spacing);
+            color: var(--brand-medium-grey);
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+        /* Horizontal Layout Variant */
+        .logo-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .logo-horizontal .main-text {
+            font-size: var(--logo-size-md);
+            font-weight: 600;
+            line-height: 1.0;
+            margin: 0;
+        }
+
+        .logo-horizontal .jd-text {
+            color: var(--brand-blue);
+        }
+
+        .logo-horizontal .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-horizontal .divider {
+            width: 2px;
+            height: 40px;
+            background-color: var(--brand-blue);
+        }
+
+        .logo-horizontal .subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: var(--letter-spacing);
+            color: var(--brand-medium-grey);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* Monochrome Variants */
+        .logo-monochrome-dark .jd-text,
+        .logo-monochrome-dark .align-text {
+            color: var(--brand-dark-grey);
+        }
+
+        .logo-monochrome-dark .underscore {
+            background-color: var(--brand-dark-grey);
+        }
+
+        .logo-monochrome-light .jd-text,
+        .logo-monochrome-light .align-text {
+            color: var(--brand-white);
+        }
+
+        .logo-monochrome-light .underscore {
+            background-color: var(--brand-white);
+        }
+
+        .logo-monochrome-light .subtitle {
+            color: #E5E7EB;
+        }
+
+        /* Dark Background Showcase */
+        .dark-bg {
+            background: var(--brand-dark-grey);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        /* Blue Background Showcase */
+        .blue-bg {
+            background: var(--brand-blue);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .blue-bg .jd-text,
+        .blue-bg .align-text {
+            color: var(--brand-white);
+        }
+
+        .blue-bg .underscore {
+            background-color: var(--brand-white);
+        }
+
+        .blue-bg .subtitle {
+            color: #E5E7EB;
+        }
+
+        /* Icon-only variant */
+        .logo-icon {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--brand-blue);
+            background: var(--brand-white);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--brand-blue);
+            margin: 0 auto 20px;
+            line-height: 1;
+            padding-top: 2px; /* Fine-tune vertical alignment */
+        }
+
+        /* Filled icon variants */
+        .logo-icon-filled-blue {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--brand-white);
+            background: var(--brand-blue);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            line-height: 1;
+            padding-top: 2px;
+        }
+
+        .logo-icon-filled-dark {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--brand-white);
+            background: var(--brand-dark-grey);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            line-height: 1;
+            padding-top: 2px;
+        }
+
+        /* Small icon variants for favicons */
+        .logo-icon-small {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brand-blue);
+            background: var(--brand-white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--brand-blue);
+            margin: 0 auto 10px;
+            line-height: 1;
+            padding-top: 1px;
+        }
+
+        .logo-icon-small-filled-blue {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brand-white);
+            background: var(--brand-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            line-height: 1;
+            padding-top: 1px;
+        }
+
+        .logo-icon-small-filled-dark {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brand-white);
+            background: var(--brand-dark-grey);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            line-height: 1;
+            padding-top: 1px;
+        }
+
+        /* Grid layout for showcasing variants */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .logo-item {
+            border: 1px solid var(--brand-light-grey);
+            padding: 30px;
+            border-radius: 6px;
+            text-align: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo-item h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand-blue);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Colour palette display */
+        .colour-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .colour-item {
+            text-align: center;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--brand-light-grey);
+        }
+
+        .colour-swatch {
+            height: 80px;
+            width: 100%;
+        }
+
+        .colour-info {
+            padding: 15px;
+            background: var(--brand-white);
+        }
+
+        .colour-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .colour-hex {
+            font-family: monospace;
+            font-size: 12px;
+            color: var(--brand-medium-grey);
+        }
+
+        /* Usage guidelines */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .usage-item {
+            padding: 20px;
+            border: 1px solid var(--brand-light-grey);
+            border-radius: 6px;
+        }
+
+        .usage-item h5 {
+            color: var(--brand-blue);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .usage-item ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .usage-item li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- MAIN LOGO - Original -->
+        <div class="section">
+            <div class="section-title">Main Logo - Original Design</div>
+            <div class="brand-notes">
+                <h4>Primary Brand Identity</h4>
+                <p><strong>Font:</strong> Source Sans Pro, 600 weight, 98px size</p>
+                <p><strong>Colours:</strong> "JD" in Blue (#2563EB), "ALIGN" in Dark Grey (#374151)</p>
+                <p><strong>Underline:</strong> 3px height, Blue (#2563EB)</p>
+                <p><strong>Subtitle:</strong> "TECHNOLOGY CONSULTING" in Medium Grey (#6B7280), 31px, uppercase, 0.05em letter-spacing</p>
+                <p><strong>Usage:</strong> Primary logo for headers, business cards, formal documents</p>
+            </div>
+            <div class="logo-container logo-main">
+                <div class="main-text">
+                    <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                </div>
+                <div class="underscore"></div>
+                <div class="subtitle">
+                    TECHNOLOGY CONSULTING
+                </div>
+            </div>
+        </div>
+
+        <!-- BRAND COLOUR PALETTE -->
+        <div class="section">
+            <div class="section-title">Brand Colour Palette</div>
+            <div class="brand-notes">
+                <h4>Official Brand Colours</h4>
+                <p>Use these exact hex values for all brand materials. Primary blue for accents and highlights, greys for text hierarchy.</p>
+            </div>
+            <div class="colour-palette">
+                <div class="colour-item">
+                    <div class="colour-swatch" style="background-color: #2563EB;"></div>
+                    <div class="colour-info">
+                        <div class="colour-name">Brand Blue</div>
+                        <div class="colour-hex">#2563EB</div>
+                    </div>
+                </div>
+                <div class="colour-item">
+                    <div class="colour-swatch" style="background-color: #374151;"></div>
+                    <div class="colour-info">
+                        <div class="colour-name">Dark Grey</div>
+                        <div class="colour-hex">#374151</div>
+                    </div>
+                </div>
+                <div class="colour-item">
+                    <div class="colour-swatch" style="background-color: #6B7280;"></div>
+                    <div class="colour-info">
+                        <div class="colour-name">Medium Grey</div>
+                        <div class="colour-hex">#6B7280</div>
+                    </div>
+                </div>
+                <div class="colour-item">
+                    <div class="colour-swatch" style="background-color: #F3F4F6;"></div>
+                    <div class="colour-info">
+                        <div class="colour-name">Light Grey</div>
+                        <div class="colour-hex">#F3F4F6</div>
+                    </div>
+                </div>
+                <div class="colour-item">
+                    <div class="colour-swatch" style="background-color: #FFFFFF; border: 1px solid #E5E7EB;"></div>
+                    <div class="colour-info">
+                        <div class="colour-name">White</div>
+                        <div class="colour-hex">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOGO SIZE VARIANTS -->
+        <div class="section">
+            <div class="section-title">Logo Size Variants</div>
+            <div class="brand-notes">
+                <h4>Scalable Logo Versions</h4>
+                <p>Different sizes for various applications while maintaining proportions and readability.</p>
+            </div>
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <h4>Large (64px) - Website Headers</h4>
+                    <div class="logo-container logo-large">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <h4>Medium (48px) - Navigation, Cards</h4>
+                    <div class="logo-container logo-medium">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <h4>Small (32px) - Footers, Sidebar</h4>
+                    <div class="logo-container logo-small">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <h4>Extra Small (24px) - Mobile, Compact</h4>
+                    <div class="logo-container logo-xs">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HORIZONTAL LAYOUT VARIANT -->
+        <div class="section">
+            <div class="section-title">Horizontal Layout Variant</div>
+            <div class="brand-notes">
+                <h4>Side-by-Side Layout</h4>
+                <p>Alternative layout for wide spaces, navigation bars, or when vertical space is limited.</p>
+            </div>
+            <div class="logo-container">
+                <div class="logo-horizontal">
+                    <div class="main-text">
+                        <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ICON VARIANTS -->
+        <div class="section">
+            <div class="section-title">Icon Variants</div>
+            <div class="brand-notes">
+                <h4>JD Icons for Favicons, Avatars, and App Icons</h4>
+                <p>Multiple icon styles including outlined and filled versions. Choose based on background and application requirements.</p>
+            </div>
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <h4>Outlined Icon - Blue on White</h4>
+                    <div class="logo-icon">JD</div>
+                    <p style="text-align: center; color: var(--brand-medium-grey); font-size: 12px;">
+                        Use for: Light backgrounds, clean minimal look
+                    </p>
+                </div>
+                <div class="logo-item">
+                    <h4>Filled Icon - White on Blue</h4>
+                    <div class="logo-icon-filled-blue">JD</div>
+                    <p style="text-align: center; color: var(--brand-medium-grey); font-size: 12px;">
+                        Use for: High contrast, app icons, social media
+                    </p>
+                </div>
+                <div class="logo-item">
+                    <h4>Filled Icon - White on Dark Grey</h4>
+                    <div class="logo-icon-filled-dark">JD</div>
+                    <p style="text-align: center; color: var(--brand-medium-grey); font-size: 12px;">
+                        Use for: Professional look, monochrome applications
+                    </p>
+                </div>
+            </div>
+            
+            <h4 style="margin-top: 40px; color: var(--brand-blue);">Small Favicon Versions (32px)</h4>
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <h4>Small Outlined</h4>
+                    <div class="logo-icon-small">JD</div>
+                    <p style="text-align: center; color: var(--brand-medium-grey); font-size: 12px;">
+                        16px, 32px favicons
+                    </p>
+                </div>
+                <div class="logo-item">
+                    <h4>Small Filled Blue</h4>
+                    <div class="logo-icon-small-filled-blue">JD</div>
+                    <p style="text-align: center; color: var(--brand-medium-grey); font-size: 12px;">
+                        High contrast favicons
+                    </p>
+                </div>
+                <div class="logo-item">
+                    <h4>Small Filled Dark</h4>
+                    <div class="logo-icon-small-filled-dark">JD</div>
+                    <p style="text-align: center; color: var(--brand-medium-grey); font-size: 12px;">
+                        Professional favicons
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BACKGROUND VARIANTS -->
+        <div class="section">
+            <div class="section-title">Background Variants</div>
+            <div class="brand-notes">
+                <h4>Logo on Different Backgrounds</h4>
+                <p>Versions optimised for dark backgrounds, coloured backgrounds, and monochrome applications.</p>
+            </div>
+            <div class="logo-grid">
+                <div class="logo-item dark-bg">
+                    <h4 style="color: white;">White on Dark Background</h4>
+                    <div class="logo-container logo-medium logo-monochrome-light">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+                <div class="logo-item blue-bg">
+                    <h4 style="color: white;">White on Brand Blue</h4>
+                    <div class="logo-container logo-medium">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <h4>Monochrome Dark</h4>
+                    <div class="logo-container logo-medium logo-monochrome-dark">
+                        <div class="main-text">
+                            <span class="jd-text">JD</span> <span class="align-text">ALIGN</span>
+                        </div>
+                        <div class="underscore"></div>
+                        <div class="subtitle">TECHNOLOGY CONSULTING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- USAGE GUIDELINES -->
+        <div class="section">
+            <div class="section-title">Usage Guidelines</div>
+            <div class="brand-notes">
+                <h4>When and How to Use Each Variant</h4>
+                <p>Follow these guidelines to maintain brand consistency across all applications.</p>
+            </div>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h5>Main Logo (98px)</h5>
+                    <ul>
+                        <li>Business cards</li>
+                        <li>Letterheads</li>
+                        <li>Proposals and reports</li>
+                        <li>Website hero sections</li>
+                        <li>Presentation title slides</li>
+                    </ul>
+                </div>
+                <div class="usage-item">
+                    <h5>Large Logo (64px)</h5>
+                    <ul>
+                        <li>Website headers</li>
+                        <li>Email signatures</li>
+                        <li>Banner advertisements</li>
+                        <li>Trade show displays</li>
+                    </ul>
+                </div>
+                <div class="usage-item">
+                    <h5>Medium Logo (48px)</h5>
+                    <ul>
+                        <li>Navigation bars</li>
+                        <li>Service cards</li>
+                        <li>Brochures</li>
+                        <li>Social media posts</li>
+                    </ul>
+                </div>
+                <div class="usage-item">
+                    <h5>Small Logo (32px)</h5>
+                    <ul>
+                        <li>Website footers</li>
+                        <li>Sidebar elements</li>
+                        <li>Mobile navigation</li>
+                        <li>Thumbnails</li>
+                    </ul>
+                </div>
+                <div class="usage-item">
+                    <h5>Horizontal Layout</h5>
+                    <ul>
+                        <li>Wide banners</li>
+                        <li>Navigation bars</li>
+                        <li>Email headers</li>
+                        <li>Responsive layouts</li>
+                    </ul>
+                </div>
+                <div class="usage-item">
+                    <h5>Icon Variants</h5>
+                    <ul>
+                        <li>Outlined: Clean backgrounds, minimal design</li>
+                        <li>Filled Blue: App icons, high contrast needs</li>
+                        <li>Filled Dark: Professional, monochrome applications</li>
+                        <li>Small versions: Favicons (16px, 32px)</li>
+                        <li>Social media profile pictures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY DETAILS -->
+        <div class="section">
+            <div class="section-title">Typography Specifications</div>
+            <div class="brand-notes">
+                <h4>Source Sans Pro Font Family</h4>
+                <p>Complete typography specifications for consistent text styling across all brand materials.</p>
+            </div>
+            <div style="background: var(--brand-light-grey); padding: 20px; border-radius: 6px; font-family: monospace; font-size: 14px;">
+                <p><strong>Primary Font:</strong> Source Sans Pro</p>
+                <p><strong>Google Fonts URL:</strong> https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap</p>
+                <p><strong>Weights Available:</strong> 300 (Light), 400 (Regular), 600 (SemiBold), 700 (Bold), 900 (Black)</p>
+                <p><strong>Logo Text Weight:</strong> 600 (SemiBold)</p>
+                <p><strong>Subtitle Weight:</strong> 400 (Regular)</p>
+                <p><strong>Letter Spacing (Subtitles):</strong> 0.05em</p>
+            </div>
+        </div>
+
+        <!-- CSS VARIABLES FOR DEVELOPERS -->
+        <div class="section">
+            <div class="section-title">CSS Variables for Development</div>
+            <div class="brand-notes">
+                <h4>Ready-to-Use CSS Custom Properties</h4>
+                <p>Copy these CSS variables for consistent brand implementation across websites and applications.</p>
+            </div>
+            <div style="background: #1F2937; color: #F9FAFB; padding: 20px; border-radius: 6px; font-family: monospace; font-size: 13px; overflow-x: auto;">
+<pre>/* JD ALIGN Brand Variables */
+:root {
+  /* Brand Colours */
+  --jd-brand-blue: #2563EB;
+  --jd-brand-dark-grey: #374151;
+  --jd-brand-medium-grey: #6B7280;
+  --jd-brand-light-grey: #F3F4F6;
+  --jd-brand-white: #FFFFFF;
+  
+  /* Typography */
+  --jd-font-family: 'Source Sans Pro', sans-serif;
+  --jd-logo-xl: 98px;
+  --jd-logo-lg: 64px;
+  --jd-logo-md: 48px;
+  --jd-logo-sm: 32px;
+  --jd-logo-xs: 24px;
+  --jd-subtitle-lg: 31px;
+  --jd-subtitle-md: 20px;
+  --jd-subtitle-sm: 14px;
+  
+  /* Layout */
+  --jd-underline-thick: 3px;
+  --jd-underline-thin: 2px;
+  --jd-letter-spacing: 0.05em;
+}</pre>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
